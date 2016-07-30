@@ -86,5 +86,10 @@ namespace MovieRentalSystem
         {
 
         }
+
+        private void tbCast_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

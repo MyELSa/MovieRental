@@ -46,3 +46,4 @@ C:\Users\Mylene Porol\Documents\C#\Final\MyELSa\MovieRentalSystem\MovieRentalSys
 C:\Users\Mylene Porol\Documents\C#\Final\MyELSa\MovieRentalSystem\MovieRentalSystem\obj\Debug\MovieRentalSystem.RentMovies.resources
 C:\Users\Mylene Porol\Documents\C#\Final\MyELSa\MovieRentalSystem\MovieRentalSystem\obj\Debug\MovieRentalSystem.Staff.resources
 C:\Users\Mylene Porol\Documents\C#\Final\MyELSa\MovieRentalSystem\MovieRentalSystem\obj\Debug\MovieRentalSystem.csproj.GenerateResource.Cache
+C:\Users\Mylene Porol\Documents\C#\Final\MyELSa\MovieRentalSystem\MovieRentalSystem\obj\Debug\MovieRentalSystem.AddCustomer.resources

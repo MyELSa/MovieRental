@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbCustomerID = new System.Windows.Forms.TextBox();
             this.tbMovieId = new System.Windows.Forms.TextBox();
-            this.RentID = new System.Windows.Forms.DateTimePicker();
             this.btnRent = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.dtgCustomers = new System.Windows.Forms.DataGridView();
             this.dtgMovies = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMovies)).BeginInit();
@@ -50,9 +50,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.dtpDate);
             this.panel1.Controls.Add(this.tbCustomerID);
             this.panel1.Controls.Add(this.tbMovieId);
-            this.panel1.Controls.Add(this.RentID);
             this.panel1.Controls.Add(this.btnRent);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
@@ -75,13 +75,6 @@
             this.tbMovieId.Name = "tbMovieId";
             this.tbMovieId.Size = new System.Drawing.Size(189, 20);
             this.tbMovieId.TabIndex = 15;
-            // 
-            // RentID
-            // 
-            this.RentID.Location = new System.Drawing.Point(118, 39);
-            this.RentID.Name = "RentID";
-            this.RentID.Size = new System.Drawing.Size(189, 20);
-            this.RentID.TabIndex = 14;
             // 
             // btnRent
             // 
@@ -193,6 +186,16 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // dtpDate
+            // 
+            this.dtpDate.CustomFormat = "MM-dd-yyyy";
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDate.Location = new System.Drawing.Point(118, 39);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(189, 20);
+            this.dtpDate.TabIndex = 35;
+            this.dtpDate.Value = new System.DateTime(2016, 7, 30, 0, 0, 0, 0);
+            // 
             // RentMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,7 +222,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker RentID;
         private System.Windows.Forms.Button btnRent;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
@@ -231,5 +233,6 @@
         private System.Windows.Forms.TextBox tbCustomerID;
         private System.Windows.Forms.TextBox tbMovieId;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }

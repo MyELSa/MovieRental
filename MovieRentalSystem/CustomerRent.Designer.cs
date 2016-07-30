@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerRent));
-            this.btnMovies = new System.Windows.Forms.Button();
-            this.dtgMovies = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.CusID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,35 +47,12 @@
             this.tbMovieID = new System.Windows.Forms.TextBox();
             this.CustomerID = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMovies)).BeginInit();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.btnMovies = new System.Windows.Forms.Button();
+            this.dtgMovies = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMovies)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnMovies
-            // 
-            this.btnMovies.BackColor = System.Drawing.Color.Thistle;
-            this.btnMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMovies.ForeColor = System.Drawing.Color.Blue;
-            this.btnMovies.Image = ((System.Drawing.Image)(resources.GetObject("btnMovies.Image")));
-            this.btnMovies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMovies.Location = new System.Drawing.Point(656, 469);
-            this.btnMovies.Name = "btnMovies";
-            this.btnMovies.Size = new System.Drawing.Size(97, 31);
-            this.btnMovies.TabIndex = 17;
-            this.btnMovies.Text = "Movies";
-            this.btnMovies.UseVisualStyleBackColor = false;
-            this.btnMovies.Click += new System.EventHandler(this.btnMovies_Click);
-            this.btnMovies.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMovies_MouseClick);
-            // 
-            // dtgMovies
-            // 
-            this.dtgMovies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgMovies.Location = new System.Drawing.Point(314, 27);
-            this.dtgMovies.Name = "dtgMovies";
-            this.dtgMovies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgMovies.Size = new System.Drawing.Size(439, 420);
-            this.dtgMovies.TabIndex = 16;
-            this.dtgMovies.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtgMovies_MouseDoubleClick);
             // 
             // panel1
             // 
@@ -104,13 +78,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 390);
             this.panel1.TabIndex = 18;
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Location = new System.Drawing.Point(70, 295);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpDate.TabIndex = 20;
             // 
             // label6
             // 
@@ -148,11 +115,11 @@
             this.btnRent.ForeColor = System.Drawing.Color.Blue;
             this.btnRent.Image = ((System.Drawing.Image)(resources.GetObject("btnRent.Image")));
             this.btnRent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRent.Location = new System.Drawing.Point(171, 331);
+            this.btnRent.Location = new System.Drawing.Point(102, 331);
             this.btnRent.Name = "btnRent";
-            this.btnRent.Size = new System.Drawing.Size(97, 31);
+            this.btnRent.Size = new System.Drawing.Size(166, 31);
             this.btnRent.TabIndex = 16;
-            this.btnRent.Text = "Rent";
+            this.btnRent.Text = "Rent\r\n";
             this.btnRent.UseVisualStyleBackColor = false;
             this.btnRent.Click += new System.EventHandler(this.btnRent_Click);
             // 
@@ -215,6 +182,7 @@
             this.tbCast.Name = "tbCast";
             this.tbCast.Size = new System.Drawing.Size(151, 21);
             this.tbCast.TabIndex = 7;
+            this.tbCast.TextChanged += new System.EventHandler(this.tbCast_TextChanged);
             // 
             // label4
             // 
@@ -279,6 +247,42 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // dtpDate
+            // 
+            this.dtpDate.CustomFormat = "MM-dd-yyyy";
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDate.Location = new System.Drawing.Point(117, 295);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(151, 20);
+            this.dtpDate.TabIndex = 35;
+            this.dtpDate.Value = new System.DateTime(2016, 7, 30, 0, 0, 0, 0);
+            // 
+            // btnMovies
+            // 
+            this.btnMovies.BackColor = System.Drawing.Color.Thistle;
+            this.btnMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovies.ForeColor = System.Drawing.Color.Blue;
+            this.btnMovies.Image = ((System.Drawing.Image)(resources.GetObject("btnMovies.Image")));
+            this.btnMovies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovies.Location = new System.Drawing.Point(656, 469);
+            this.btnMovies.Name = "btnMovies";
+            this.btnMovies.Size = new System.Drawing.Size(97, 31);
+            this.btnMovies.TabIndex = 17;
+            this.btnMovies.Text = "Movies";
+            this.btnMovies.UseVisualStyleBackColor = false;
+            this.btnMovies.Click += new System.EventHandler(this.btnMovies_Click);
+            this.btnMovies.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMovies_MouseClick);
+            // 
+            // dtgMovies
+            // 
+            this.dtgMovies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgMovies.Location = new System.Drawing.Point(314, 27);
+            this.dtgMovies.Name = "dtgMovies";
+            this.dtgMovies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgMovies.Size = new System.Drawing.Size(439, 420);
+            this.dtgMovies.TabIndex = 16;
+            this.dtgMovies.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtgMovies_MouseDoubleClick);
+            // 
             // CustomerRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,17 +294,14 @@
             this.Controls.Add(this.dtgMovies);
             this.Name = "CustomerRent";
             this.Text = "CustomerRent";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMovies)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMovies)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnMovies;
-        private System.Windows.Forms.DataGridView dtgMovies;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tbRY;
         private System.Windows.Forms.TextBox tbLang;
@@ -318,7 +319,9 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox CusID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.Button btnMovies;
+        private System.Windows.Forms.DataGridView dtgMovies;
     }
 }

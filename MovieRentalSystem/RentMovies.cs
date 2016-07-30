@@ -56,7 +56,7 @@ namespace MovieRentalSystem
 
         private void btnRent_Click(object sender, EventArgs e)
         {
-            if (RentID.Text == String.Empty ||
+            if (dtpDate.Text == String.Empty ||
                tbMovieId.Text == String.Empty ||
                  tbCustomerID.Text == String.Empty)
 
@@ -71,7 +71,7 @@ namespace MovieRentalSystem
                 DataSet ds = new DataSet();
 
                 da.InsertCommand = new SqlCommand("INSERT INTO Rent VALUES(@RentID,@CustomerID,@MovieID)", con);
-                da.InsertCommand.Parameters.Add("@RentID", SqlDbType.VarChar).Value = RentID.Text;
+                da.InsertCommand.Parameters.Add("@RentID", SqlDbType.VarChar).Value = dtpDate.Text;
                 da.InsertCommand.Parameters.Add("@CustomerID", SqlDbType.VarChar).Value = tbMovieId.Text;
                 da.InsertCommand.Parameters.Add("@MovieID", SqlDbType.VarChar).Value = tbCustomerID.Text;
 

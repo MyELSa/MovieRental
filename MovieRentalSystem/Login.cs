@@ -22,16 +22,16 @@ namespace MovieRentalSystem
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (tbID.Text == String.Empty || 
+            if (///tbID.Text == String.Empty || 
                 tbFN.Text == String.Empty || 
                 tbMI.Text == String.Empty || 
                 tbLN.Text == String.Empty ||
                 tbAddress.Text == String.Empty ||
                 tbContact.Text == String.Empty ||
                 tbEmailR.Text == String.Empty ||
-                cbMM.Text == String.Empty ||
-                cbDD.Text == String.Empty ||
-                cbYYYY.Text == String.Empty)
+               // cbMM.Text == String.Empty ||
+                //cbDD.Text == String.Empty ||
+                dtpDate.Text == String.Empty)
 
 
             {
@@ -51,7 +51,7 @@ namespace MovieRentalSystem
                 da.InsertCommand.Parameters.Add("@Address", SqlDbType.VarChar).Value = tbAddress.Text;
                 da.InsertCommand.Parameters.Add("@EmailAddress", SqlDbType.VarChar).Value = tbEmailR.Text;
                 da.InsertCommand.Parameters.Add("@ContactNo", SqlDbType.Int).Value = tbContact.Text;
-                da.InsertCommand.Parameters.Add("@CustomerID", SqlDbType.VarChar).Value = tbID.Text;
+                da.InsertCommand.Parameters.Add("@CustomerID", SqlDbType.VarChar).Value = dtpDate.Text +'_'+ tbLN.Text;
 
                 con.Open();
                 da.InsertCommand.ExecuteNonQuery();
@@ -82,7 +82,7 @@ namespace MovieRentalSystem
         {
 
         }
-        private int attemptsLeft = 3;
+        //private int attemptsLeft = 3;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (tbUsername.Text == String.Empty)
@@ -108,12 +108,12 @@ namespace MovieRentalSystem
             // if (b != "admin")
             {
 
-                MessageBox.Show("Incorrect Password " + --attemptsLeft + " attempts more.", "You're Not the Admin", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Incorrect Password " /*+ --attemptsLeft */+ " attempts more.", "You're Not the Admin", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                if (attemptsLeft == 0)
-                {
-                    Application.Exit();
-                }
+                //if (attemptsLeft == 0)
+                //{
+                //    Application.Exit();
+                //}
             }
             else
             {
@@ -151,12 +151,12 @@ namespace MovieRentalSystem
             // if (b != "admin")
             {
 
-                MessageBox.Show("Incorrect Password " + --attemptsLeft + " attempts more.", "You're Not the Admin", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Incorrect Password " +/* --attemptsLeft+*/ " attempts more.", "You're Not the Admin", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                if (attemptsLeft == 0)
-                {
-                    Application.Exit();
-                }
+                //if (attemptsLeft == 0)
+                //{
+                //    Application.Exit();
+                //}
             }
             else
             {
@@ -164,6 +164,11 @@ namespace MovieRentalSystem
                 Form.Show();
                 this.Hide();
             }
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

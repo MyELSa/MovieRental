@@ -47,5 +47,12 @@ namespace MovieRentalSystem
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddCustomer open = new AddCustomer();
+            open.Show();
+            this.Hide();
+        }
     }
 }

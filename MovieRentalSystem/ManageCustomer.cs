@@ -58,11 +58,11 @@ namespace MovieRentalSystem
 
             if (tbCustomerIDm.Text == String.Empty ||
                tbFName.Text == String.Empty ||
-              tbMIm.Text == String.Empty ||
-              tbLname.Text == String.Empty ||
-               tbAddrs.Text == String.Empty ||
-              tbEadd.Text == String.Empty ||
-               tbCn.Text == String.Empty)
+                tbMIm.Text == String.Empty ||
+                tbLname.Text == String.Empty ||
+                  tbAddrs.Text == String.Empty ||
+                tbEadd.Text == String.Empty ||
+                 tbCn.Text == String.Empty)
 
 
             {

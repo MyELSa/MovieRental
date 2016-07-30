@@ -24,23 +24,37 @@ namespace MovieRentalSystem
         SqlConnection con = new SqlConnection("Data Source=MYLENE,49170;Initial Catalog=MovieRentalSystem;Integrated Security=True");
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlDataAdapter da = new SqlDataAdapter();
-            DataSet ds = new DataSet();
-
-            da.InsertCommand = new SqlCommand("INSERT INTO MovieInformation VALUES(@MovieID,@MovieName,@Genre,@Language,@Cast,@YearReleased)", con);
-            da.InsertCommand.Parameters.Add("@MovieID", SqlDbType.VarChar).Value = tbMovieID.Text;
-            da.InsertCommand.Parameters.Add("@MovieName", SqlDbType.VarChar).Value = tbMName.Text;
-            da.InsertCommand.Parameters.Add("@Genre", SqlDbType.VarChar).Value =  cbGenre.Text;
-            da.InsertCommand.Parameters.Add("@Language", SqlDbType.VarChar).Value = cbLanguage.Text;
-            da.InsertCommand.Parameters.Add("@Cast", SqlDbType.VarChar).Value = tbCast.Text;
-            da.InsertCommand.Parameters.Add("@YearReleased", SqlDbType.VarChar).Value = cbYReleased.Text;
-            //da.InsertCommand.Parameters.Add("@CustomerID", SqlDbType.VarChar).Value = tbMovieID.Text;
+            if (tbMovieID.Text == String.Empty ||
+               tbMName.Text == String.Empty ||
+               cbGenre.Text == String.Empty ||
+                cbLanguage.Text == String.Empty ||
+                tbCast.Text == String.Empty ||
+                cbYReleased.Text == String.Empty)
 
 
-            da.InsertCommand.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Save Success");
+            {
+                MessageBox.Show("Fill up all the Given");
+            }
+            else
+            {
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+
+                da.InsertCommand = new SqlCommand("INSERT INTO MovieInformation VALUES(@MovieID,@MovieName,@Genre,@Language,@Cast,@YearReleased)", con);
+                da.InsertCommand.Parameters.Add("@MovieID", SqlDbType.VarChar).Value = tbMovieID.Text;
+                da.InsertCommand.Parameters.Add("@MovieName", SqlDbType.VarChar).Value = tbMName.Text;
+                da.InsertCommand.Parameters.Add("@Genre", SqlDbType.VarChar).Value = cbGenre.Text;
+                da.InsertCommand.Parameters.Add("@Language", SqlDbType.VarChar).Value = cbLanguage.Text;
+                da.InsertCommand.Parameters.Add("@Cast", SqlDbType.VarChar).Value = tbCast.Text;
+                da.InsertCommand.Parameters.Add("@YearReleased", SqlDbType.VarChar).Value = cbYReleased.Text;
+                //da.InsertCommand.Parameters.Add("@CustomerID", SqlDbType.VarChar).Value = tbMovieID.Text;
+
+
+                da.InsertCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Save Success");
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

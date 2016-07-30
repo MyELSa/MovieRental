@@ -35,6 +35,7 @@
             this.profile = new System.Windows.Forms.PictureBox();
             this.btnSO = new System.Windows.Forms.Button();
             this.btnRent = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profile)).BeginInit();
@@ -87,7 +88,7 @@
             // btnSO
             // 
             this.btnSO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSO.Location = new System.Drawing.Point(12, 221);
+            this.btnSO.Location = new System.Drawing.Point(12, 280);
             this.btnSO.Name = "btnSO";
             this.btnSO.Size = new System.Drawing.Size(145, 33);
             this.btnSO.TabIndex = 24;
@@ -106,11 +107,23 @@
             this.btnRent.UseVisualStyleBackColor = true;
             this.btnRent.Click += new System.EventHandler(this.btnRent_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 222);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 42);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Register Customer";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 568);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.profile);
             this.Controls.Add(this.btnSO);
@@ -132,5 +145,6 @@
         private System.Windows.Forms.PictureBox profile;
         private System.Windows.Forms.Button btnSO;
         private System.Windows.Forms.Button btnRent;
+        private System.Windows.Forms.Button button1;
     }
 }

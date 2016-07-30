@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageMovies));
             this.tbMName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbCast = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.dtgView1 = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
+            this.tbCast = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgView1)).BeginInit();
             this.SuspendLayout();
@@ -70,14 +70,6 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "MovieName:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // tbCast
-            // 
-            this.tbCast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCast.Location = new System.Drawing.Point(117, 201);
-            this.tbCast.Name = "tbCast";
-            this.tbCast.Size = new System.Drawing.Size(151, 21);
-            this.tbCast.TabIndex = 7;
             // 
             // label4
             // 
@@ -131,13 +123,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.tbCast);
             this.panel1.Controls.Add(this.cbYReleased);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cbLanguage);
             this.panel1.Controls.Add(this.cbGenre);
             this.panel1.Controls.Add(this.tbMName);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.tbCast);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -168,7 +160,7 @@
             "2018",
             "2019",
             "2020"});
-            this.cbYReleased.Location = new System.Drawing.Point(117, 242);
+            this.cbYReleased.Location = new System.Drawing.Point(117, 285);
             this.cbYReleased.Name = "cbYReleased";
             this.cbYReleased.Size = new System.Drawing.Size(151, 21);
             this.cbYReleased.TabIndex = 13;
@@ -177,7 +169,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 243);
+            this.label1.Location = new System.Drawing.Point(18, 286);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 15);
             this.label1.TabIndex = 12;
@@ -284,6 +276,14 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // tbCast
+            // 
+            this.tbCast.Location = new System.Drawing.Point(117, 203);
+            this.tbCast.Name = "tbCast";
+            this.tbCast.Size = new System.Drawing.Size(151, 76);
+            this.tbCast.TabIndex = 14;
+            this.tbCast.Text = "";
+            // 
             // ManageMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,7 +310,6 @@
         #endregion
         private System.Windows.Forms.TextBox tbMName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbCast;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -326,5 +325,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbYReleased;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.RichTextBox tbCast;
     }
 }
